@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:XamarinAdal" x:Class="XamarinAdal.XamarinAdalPage" BackgroundColor="#DAEFF1">
+	    <StackLayout Orientation="Vertical" Margin="40,40,40,40">
+        <Label Text="Xamarin ADAL" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center" />
+        <Button Text="Login" Clicked="Login_Clicked" />
+        <Button Text="Clear Token" Clicked="Clear_Clicked" />
+    </StackLayout>
+</ContentPage>
