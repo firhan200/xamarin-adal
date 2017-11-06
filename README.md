@@ -1,8 +1,8 @@
-# Securing our mobile app and services
+## Securing our mobile app and services
 
 Security is one of the most important concerns we need to keep in mind once we design mobile solutions. In this scenario will be reviewing how to implement Azure Active Directory authentication in our mobile application (Xamarin Application) and then how to protect our Azure App Service (Mobile App, Logic App, Function App) to prevent not authorized requests in our service.
 
-# Configuring Azure environment
+#### Configuring Azure environment
 
 For these scenario we are going to use the following Azure resources:
 
@@ -60,7 +60,9 @@ Then press "Grant Permissions".
 
 Congrats!! :) At this point you have setup all we need to execute our mobile application.
 
-***Clone the project from GitHub repo***
+## Mobile application (Xamarin)
+
+#### Clone the project from GitHub repo
 
 `git clone https://github.com/rcervantes/xamarin-adal.git`
 
