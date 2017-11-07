@@ -109,4 +109,4 @@ The profile information (name) is displayed in the application and a asynchronou
 
 **Credits**
 
-I want to thank Michael Watson (@michael-watson) for the support in this excercise and hope soon have the UWP implementation public.
+I want to thank [Michael Watson](https://github.com/michael-watson) for the support in this excercise and hope soon have the UWP implementation public.
