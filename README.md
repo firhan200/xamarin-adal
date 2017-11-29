@@ -12,11 +12,11 @@ For these scenario we are going to use the following Azure resources:
 
 It's time to create our App Service, in this sample we are using Mobile App Service, you can also create an App Service family member.
 
-<img src="http://rcervantes.me/images/xamarinadal-createappservice.png" width="250">
+<img src="http://rcervantes.me/images/xamarinadal-createappservice.png" width="250" />
 
 Now you can set the Authentication/Authorization feature to enable the Azure Active Directory authentication provider.
 
-<img src="http://rcervantes.me/images/xamarinadal-authorization-aad.png" width="550">
+<img src="http://rcervantes.me/images/xamarinadal-authorization-aad.png" width="550" />
 
 It's time to create our first Azure Active Directory application in the Express settings. In this sample I used the Prefix: XamarinAdal since is our Project and the Sufix: Backend since is our API REST.
 
@@ -24,21 +24,21 @@ It's time to create our first Azure Active Directory application in the Express 
 * Enable "Grant Graph Permissions" and "Grant Common Data Services Permissions".
 * Save all the changes.
 
-<img src="http://rcervantes.me/images/xamarinadal-aad-application-backend.png" width="550">
+<img src="http://rcervantes.me/images/xamarinadal-aad-application-backend.png" width="550" />
 
 Once our changes have been applied in the Mobile App Service, we can go to Azure Active Directory workload and search the application recently created, in this sample is: XamarinAdalBackend. 
 
 * Copy the Application ID and save it temporarily.
 
-<img src="http://rcervantes.me/images/xamarinadal-backend-configuration.png" width="550">
+<img src="http://rcervantes.me/images/xamarinadal-backend-configuration.png" width="550" />
 
 Go directly to the Azure Active Directory application settings, it's not required to modify any settings because all permissions are delegated.
 
-<img src="http://rcervantes.me/images/xamarinadal-backend-preview-settings.png" width="550">
+<img src="http://rcervantes.me/images/xamarinadal-backend-preview-settings.png" width="550" />
 
 Just press "Grant Permissions".
 
-<img src="http://rcervantes.me/images/xamarinadal-backend-settings.png" width="550">
+<img src="http://rcervantes.me/images/xamarinadal-backend-settings.png" width="550" />
 
 **At this point we have successfully configured our Mobile App Service and the Azure Active Directory application. It's time to configure our Azure Active Directory application for the mobile application.**
 
@@ -48,15 +48,15 @@ Go to Azure Active Directory and select App Registrations, then press "+ New app
 * Select Native application type.
 * Write the redirect uri, e.g. https://YOUR_APP_SERVICE.azurewebsites.net/.auth/login/done
 
-<img src="http://rcervantes.me/images/xamarinadal-mobile-creation.png" width="250">
+<img src="http://rcervantes.me/images/xamarinadal-mobile-creation.png" width="250" />
 
 As the same as Azure Active Directory application for backend (XamarinAdalBackend), go to the application settings, and now add the your backend Azure Active Directory application to the scope of the Azure Active Directory application for mobile (XamarinAdalMobile).
 
-<img src="http://rcervantes.me/images/xamarinadal-mobile-add-settings.png" width="550">
+<img src="http://rcervantes.me/images/xamarinadal-mobile-add-settings.png" width="550" />
 
 Then press "Grant Permissions".
 
-<img src="http://rcervantes.me/images/xamarinadal-mobile-settings.png" width="550">
+<img src="http://rcervantes.me/images/xamarinadal-mobile-settings.png" width="550" />
 
 Congrats!! :) At this point you have setup all we need to execute our mobile application.
 
@@ -93,19 +93,19 @@ namespace XamarinAdal
 
 The app display the buttons to login and clear token:
 
-<img src="http://rcervantes.me/images/xamarinadal-mobile-app1.png" width="250">
+<img src="http://rcervantes.me/images/xamarinadal-mobile-app1.png" width="250" />
 
 When login the app request a valid mail and password:
 
-<img src="http://rcervantes.me/images/xamarinadal-mobile-app2.png" width="250">
+<img src="http://rcervantes.me/images/xamarinadal-mobile-app2.png" width="250" />
 
 Proceed with the authentication process and ask the user to grant access to the profile information:
 
-<img src="http://rcervantes.me/images/xamarinadal-mobile-app3.png" width="250">
+<img src="http://rcervantes.me/images/xamarinadal-mobile-app3.png" width="250" />
 
 The profile information (name) is displayed in the application and a asynchronous request is made to retrieve data from the Mobile App Service with the token provided:
 
-<img src="http://rcervantes.me/images/xamarinadal-mobile-app4.png" width="250">
+<img src="http://rcervantes.me/images/xamarinadal-mobile-app4.png" width="250" />
 
 **Credits**
 
