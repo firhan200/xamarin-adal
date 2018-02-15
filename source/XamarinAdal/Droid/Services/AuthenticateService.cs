@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Threading.Tasks;
-using Android.App;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using XamarinAdal.Droid.Services;
 using XamarinAdal.Interfaces;
-using Xamarin.Forms;
 using System.Linq;
 using XamarinAdal.Domain;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AuthenticateService))]
 
@@ -23,7 +21,7 @@ namespace XamarinAdal.Droid.Services
                 if (authContext.TokenCache.ReadItems().Any())
                     authContext = new AuthenticationContext(authContext.TokenCache.ReadItems().First().Authority);
 
-                var authParam = new PlatformParameters((Activity)Forms.Context);
+                var authParam = new PlatformParameters(CrossCurrentActivity.Current.Activity);
                 var authResult = await authContext.AcquireTokenAsync(resource, clientId, new Uri(returnUri), authParam);
 
                 var result = new AuthenticateResponse
